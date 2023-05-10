@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { SeeAddressComponent } from './components/see-address/see-address.component';
+import { SeeAddressService } from './components/see-address/see-address.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeeAddressComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [SeeAddressService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
